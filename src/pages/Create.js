@@ -11,7 +11,7 @@ function Create() {
 
   const handleSubmit = async(e) => {
     e.preventDefault()
-    const blog = {title, body, author}
+    const blog = {title, body, author, user: currentUser.currentUser.email}
 
     fetch('https://fake-server-json.herokuapp.com/blogs', {
       method: 'POST',
