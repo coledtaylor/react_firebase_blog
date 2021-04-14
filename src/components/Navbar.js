@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <h1>Fox Blog</h1>
+        <h1>MKD Blog</h1>
         {error && <Alert variant="danger">{error}</Alert>}
         <div className="links">
           <Link to="/">Home</Link>
