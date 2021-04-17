@@ -26,7 +26,7 @@ function Signup() {
       await signUp(emailRef.current.value, passwordRef.current.value)
       history.push("/")
     } catch {
-      setError("Failed to create an account")
+      setError("Failed to create an account. Try again Later")
     }
 
     setLoading(false)
