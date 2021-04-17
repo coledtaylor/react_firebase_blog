@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Button, Alert, Navbar, Popover, OverlayTrigger, Nav } from 'react-bootstrap' 
+import { Alert, Navbar, Popover, OverlayTrigger, Nav } from 'react-bootstrap' 
 import { PersonSquare } from 'react-bootstrap-icons'
 
 function NavbarCustom() {
@@ -23,7 +23,11 @@ function NavbarCustom() {
   return (
     <div>
       <Navbar expand="lg" className="navbar">
-        <Navbar.Brand><h1>MKD Blog</h1></Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/">
+            <h1>MKD Blog</h1>
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         {error && <Alert variant="danger">{error}</Alert>}
         <Navbar.Collapse id="responsive-navbar-nav">
